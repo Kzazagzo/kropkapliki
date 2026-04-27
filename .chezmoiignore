@@ -1,0 +1,6 @@
+**/.git
+**/.github
+**/.codex
+**/.agents
+**/*.bak
+.config/fish/fish_variables

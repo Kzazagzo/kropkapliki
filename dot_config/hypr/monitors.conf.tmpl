@@ -1,0 +1,25 @@
+{{ if eq .chezmoi.hostname "main" }}
+monitorv2[desc:Acer Technologies XV272U 0x11616BC2] {
+    mode = 2560x1440@144
+    position = 0x0
+    scale = 1
+    vrr = 0
+}
+monitorv2[desc:Microstep MPG272UX OLED 0x01010101] {
+    mode = 3840x2160@240
+    position = 2560x0
+    scale = 1.5
+    bitdepth = 10
+    vrr = 0
+    # cm = hdredid
+    sdrbrightness = 1.2
+    sdrsaturation = 1
+    sdr_min_luminance = 0.005
+    sdr_max_luminance = 220
+    min_luminance = 0
+    max_luminance = 1000
+    max_avg_luminance = 1000
+}
+{{ else if eq .chezmoi.hostname "laptop" }}
+monitor=,preferred,auto,1
+{{ end }}
